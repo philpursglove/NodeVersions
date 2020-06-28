@@ -51,6 +51,10 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 :: Deployment
 :: ----------
 
+echo Get the Node and NPM versions
+call node -v
+call npm -v
+
 echo Handling ASP.NET Core Web Application deployment with MSBuild16.
 
 :: 1. Restore, Build and publish
