@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -22,6 +23,23 @@ namespace NodeVersions.Pages
 
         public void OnGet()
         {
+            if (!System.IO.File.Exists("node.txt"))
+            {
+                NodeVersion = "Unknown";
+            }
+            else
+            {
+                NodeVersion = System.IO.File.ReadAllText("node.txt");
+            }
+
+            if (!System.IO.File.Exists("npm.txt"))
+            {
+                NpmVersion = "Unknown";
+            }
+            else
+            {
+                NpmVersion = System.IO.File.ReadAllText("npm.txt");
+            }
 
         }
     }
