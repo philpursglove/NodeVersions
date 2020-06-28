@@ -59,7 +59,7 @@ call npm -v
 echo Output the versions to text files so we can deploy them with the app
 call node -v > node.txt
 call npm -v > npm.txt
-
+call copy *.txt %ARTIFACTS%
 
 echo Handling ASP.NET Core Web Application deployment with MSBuild16.
 
