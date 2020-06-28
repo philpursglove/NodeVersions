@@ -12,6 +12,9 @@ namespace NodeVersions.Pages
     {
         private readonly ILogger<IndexModel> _logger;
 
+        public string NodeVersion { get; set; }
+        public string NpmVersion { get; set; }
+
         public IndexModel(ILogger<IndexModel> logger)
         {
             _logger = logger;
