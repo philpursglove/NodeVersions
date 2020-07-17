@@ -61,6 +61,9 @@ call node -v > node.txt
 call npm -v > npm.txt
 call copy *.txt %DEPLOYMENT_TEMP%
 
+echo Is NVM installed
+call nvm
+
 echo Handling ASP.NET Core Web Application deployment with MSBuild16.
 
 :: 1. Restore, Build and publish
